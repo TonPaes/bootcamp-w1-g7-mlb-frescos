@@ -31,6 +31,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
                 .mvcMatchers(HttpMethod.POST, "/api/v1/fresh-products/orders").hasRole("CLIENT")
                 .mvcMatchers(HttpMethod.GET, "/api/v1/fresh-products/orders").hasRole("CLIENT")
                 .mvcMatchers(HttpMethod.PUT, "/api/v1/fresh-products/orders").hasRole("CLIENT")
+                .mvcMatchers(HttpMethod.GET, "/backoffice/list_accounts").hasRole("SUPERVISOR")
                 .anyRequest().authenticated();
     }
 
