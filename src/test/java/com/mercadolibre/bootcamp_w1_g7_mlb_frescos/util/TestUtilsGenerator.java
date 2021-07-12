@@ -724,9 +724,21 @@ public class TestUtilsGenerator {
                         500, 500, "2021-06-10", "2021-06-03 00:00:00", "2021-08-15", 2)  + "]}}";
         return request;
     }
+    public static String createOrderRequest(){
+        return " { \"order\" : [{ \"productId\" : \"51b3b287-0b78-484c-90c3-606c4bae9401\", \"quantity\" : 10}]}";
+    }
 
     public static String createToken() {
         return "Bearer " + JWTUtil.getJWT(createPersistedAccountSupervisor());
+    }
+
+    public static String getClientToken(){
+        Account account = new Account();
+        Role role = new Role();
+        role.setId("ROLE_CLIENT");
+        account.setUserName("test");
+        account.setRole(role);
+        return "Bearer " + JWTUtil.getJWT(account);
     }
 
     public static List<BatchInfoDTO> createBatchInfoList() {
