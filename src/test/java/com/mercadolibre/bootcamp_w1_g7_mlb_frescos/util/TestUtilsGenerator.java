@@ -3,6 +3,8 @@ package com.mercadolibre.bootcamp_w1_g7_mlb_frescos.util;
 import com.mercadolibre.bootcamp_w1_g7_mlb_frescos.dtos.*;
 import com.mercadolibre.bootcamp_w1_g7_mlb_frescos.model.*;
 import com.mercadolibre.bootcamp_w1_g7_mlb_frescos.security.JWTUtil;
+
+import org.h2.command.ddl.CreateRole;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
 import org.modelmapper.convention.MatchingStrategies;
@@ -176,6 +178,18 @@ public class TestUtilsGenerator {
         supervisor.setName("Barbara");
         supervisor.setWarehouse(warehouse);
         return supervisor;
+    }
+
+    private static Role creteRole(){
+        return new Role("ROLE_CLIENT", null);
+    }
+
+    public static List<Account> createClients(){
+        List<Account> accounts = new ArrayList<Account>();
+        accounts.add(new Account(UUID.randomUUID(), "User0", null, creteRole()));
+        accounts.add(new Account(UUID.randomUUID(), "User1", null, creteRole()));
+        accounts.add(new Account(UUID.randomUUID(), "User2", null, creteRole()));
+        return accounts;
     }
 
     public static InboundOrder createInboundOrder(){
