@@ -3,7 +3,6 @@ package com.mercadolibre.bootcamp_w1_g7_mlb_frescos.controller;
 import java.util.List;
 
 import com.mercadolibre.bootcamp_w1_g7_mlb_frescos.dtos.ClientDTO;
-import com.mercadolibre.bootcamp_w1_g7_mlb_frescos.model.Account;
 import com.mercadolibre.bootcamp_w1_g7_mlb_frescos.service.account.AccountService;
 
 import org.springframework.beans.factory.annotation.Autowired;

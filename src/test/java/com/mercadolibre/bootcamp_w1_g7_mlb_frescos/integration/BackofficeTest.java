@@ -1,7 +1,6 @@
 package com.mercadolibre.bootcamp_w1_g7_mlb_frescos.integration;
 
 import com.mercadolibre.bootcamp_w1_g7_mlb_frescos.repository.AccountRepository;
-import com.mercadolibre.bootcamp_w1_g7_mlb_frescos.repository.InboundOrderRepository;
 import com.mercadolibre.bootcamp_w1_g7_mlb_frescos.util.TestUtilsGenerator;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -17,8 +16,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-
-import java.time.LocalDate;
 
 
 @SpringBootTest
